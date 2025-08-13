@@ -3,6 +3,8 @@
 #include "compiler.h"
 #include "vm.h"
 
+#define PEBBLE_VERSION "v1.0"
+
 static char *read_file(const char *path){
     FILE *f = fopen(path, "rb");
     if(!f) return NULL;
@@ -19,6 +21,11 @@ int main(int argc, char **argv){
     }
     char *src = read_file(argv[1]);
     if(!src){ fprintf(stderr, "Cannot open %s\n", argv[1]); return 1; }
+
+    if (argc > 1 && strcmp(argv[1], "--version") == 0) {
+        printf("Pebble language version %s\n", PEBBLE_VERSION);
+        return 0;
+    }
 
     Chunk chunk;
     if(!compile_source(src, &chunk)){
