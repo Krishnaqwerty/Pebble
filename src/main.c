@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "compiler.h"
 #include "vm.h"
+#include <string.h>
 
 #define PEBBLE_VERSION "v1.0"
 
