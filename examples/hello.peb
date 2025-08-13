@@ -1,0 +1,4 @@
+say "Hello, Pebble!"
+let x = 5 + 7*2
+say x
+say "Done."
