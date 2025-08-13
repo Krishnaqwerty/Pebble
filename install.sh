@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-REPO="your-github-username/pebble-vm"
+REPO="Krishnaqwerty/Pebble"
 VERSION=${1:-"latest"}
 
 if [ "$VERSION" = "latest" ]; then
