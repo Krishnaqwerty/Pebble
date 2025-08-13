@@ -11,6 +11,9 @@ fi
 OS=$(uname -s)
 ARCH=$(uname -m)
 
+echo "🔑 This installer requires administrator privileges."
+sudo -v 
+
 case "$OS" in
     Linux) FILE="pebble-ubuntu-latest" ;;
     Darwin) FILE="pebble-macos-latest" ;;
