@@ -6,4 +6,4 @@ Pebble is a small, lightweight programming language with its own VM.
 
 Linux/macOS:
 ```bash
-curl -L https://raw.githubusercontent.com/YOUR-USERNAME/pebble-vm/main/install.sh | bash
+curl -L https://raw.githubusercontent.com/Krishnaqwerty/pebble-vm/main/install.sh | bash
