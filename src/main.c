@@ -16,6 +16,12 @@ static char *read_file(const char *path){
 }
 
 int main(int argc, char **argv){
+
+    if (argc > 1 && strcmp(argv[1], "--version") == 0) {
+        printf("Pebble language version %s\n", PEBBLE_VERSION);
+        return 0;
+    }
+    
     if(argc < 2){
         fprintf(stderr, "Usage: %s <file.peb>\n", argv[0]);
         return 1;
@@ -23,10 +29,7 @@ int main(int argc, char **argv){
     char *src = read_file(argv[1]);
     if(!src){ fprintf(stderr, "Cannot open %s\n", argv[1]); return 1; }
 
-    if (argc > 1 && strcmp(argv[1], "--version") == 0) {
-        printf("Pebble language version %s\n", PEBBLE_VERSION);
-        return 0;
-    }
+    
 
     Chunk chunk;
     if(!compile_source(src, &chunk)){
